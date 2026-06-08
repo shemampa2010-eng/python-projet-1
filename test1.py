@@ -1,0 +1,6 @@
+name= input("What is your name? ")
+print("Hello, " + name + "! Welcome to Python programming.")
+age = input("How old are you? ")
+print("You are " + age + " years old. That's great!")       
+favorite_color = input("What is your favorite color? ")
+print("Your favorite color is " + favorite_color + ". Good choice!") 
