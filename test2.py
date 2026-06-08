@@ -2,6 +2,7 @@ print ("Choisissez une opération: ")
 print ("1. Addition")
 print ("2. Soustraction")
 print ("3. Multiplication")
+# Test 1
 operation = input("Entrez le numéro de votre choix (1,2,3,4) : ")
 if operation == "1":
     num1 = float(input("Entrez le premier chiffre : "))
