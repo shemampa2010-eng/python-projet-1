@@ -8,12 +8,16 @@ for student_mark in range(len(students_marks)):
 # total = sum(students_marks)
 # average = total/len(students_marks)
 index = 1
+Admis_counter = 0
+Refuse_counter = 0
 for student_mark in students_marks :
 
  if student_mark < needed_to_pass :
   print ("Studiant" , index , ":", student_mark , "Refuse")
+  Admis_counter += 1
  else :
   print("Studiant" , index ,":", student_mark, "Admis" )
- index += 1
-
+  Refuse_counter += 1
+index += 1
+print ( "Admis", ":" , Admis_counter ,"\nRefuse",":", Refuse_counter)
  
