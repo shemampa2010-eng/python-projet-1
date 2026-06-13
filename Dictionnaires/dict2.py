@@ -23,11 +23,15 @@ for i in range(1, period_exp + 1):
 
 amountlist = []
 
+highest_per_day = []
+
 for k in all_expenses :
-    dailyamouts = []
+    dailyamounts = []
     for g in k :
-        dailyamouts.append(g["amount"])
-    amountlist.extend (dailyamouts)    
+        dailyamounts.append(g["amount"])
+    highest_per_day.append ( max(dailyamounts))
+
+    amountlist.extend (dailyamounts)    
 print (amountlist)
 
 
@@ -40,7 +44,6 @@ average_day = total / len(all_expenses)
 
 highest = max(amountlist)
 
-highest_per_day = max(dailylist)
 
 
 print("\n","   Expense Summary   ")
@@ -49,5 +52,5 @@ print("Average per transaction:", average_transaction, "Frw")
 print("Average per day:", average_day, "Frw")
 
 print("\nHighest expense per day:")
-for day in highest_per_day:
-    print("Day", day, ":", highest_per_day[day], "Frw")
+for day in range (len(highest_per_day)):
+    print("Day", day + 1 , ":", highest_per_day[day], "Frw")
