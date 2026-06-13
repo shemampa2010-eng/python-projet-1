@@ -24,12 +24,14 @@ for i in range(1, period_exp + 1):
 amountlist = []
 
 highest_per_day = []
+lowest_per_day = []
 
 for k in all_expenses :
     dailyamounts = []
     for g in k :
         dailyamounts.append(g["amount"])
     highest_per_day.append ( max(dailyamounts))
+    lowest_per_day.append (min(dailyamounts))
 
     amountlist.extend (dailyamounts)    
 print (amountlist)
@@ -54,3 +56,7 @@ print("Average per day:", average_day, "Frw")
 print("\nHighest expense per day:")
 for day in range (len(highest_per_day)):
     print("Day", day + 1 , ":", highest_per_day[day], "Frw")
+
+print("\nLowest expense per day:")
+for day in range (len(lowest_per_day)):
+    print("Day", day + 1 , ":", lowest_per_day[day], "Frw")
