@@ -34,7 +34,6 @@ for k in all_expenses :
     lowest_per_day.append (min(dailyamounts))
 
     amountlist.extend (dailyamounts)    
-print (amountlist)
 
 
 
